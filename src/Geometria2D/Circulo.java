@@ -15,8 +15,8 @@ public class Circulo {
         perimetroCirculo = 0;
     }
 
-    public void areaCirculo() {
-        System.out.println("EL area es :"+Math.PI*Math.pow(radioCirculo,2));
+    public double areaCirculo() {
+        return Math.PI*Math.pow(radioCirculo,2);
     }
 
     public void diametroCircuo(){

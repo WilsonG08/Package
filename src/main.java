@@ -6,6 +6,7 @@ public class main {
         int op;
         Circulo cir = new Circulo();
         menu menu = new menu();
+        double auxR;
 
 
         do{
@@ -20,7 +21,8 @@ public class main {
                                 do{
                                     System.out.println("\n¡Ingrese valores positivos!\n");
                                     System.out.print("Ingrese el radio del círculo: ");
-
+                                    cir.setRadioCirculo(auxR = menu.sc.nextDouble());
+                                    System.out.println("Area Circulo: " + cir.areaCirculo());
                                 }while (op < 0);
                                 break;
                         }
