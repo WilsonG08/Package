@@ -5,23 +5,17 @@ import java.util.Scanner;
 public class Circulo {
 
     Scanner sc= new Scanner(System.in);
-    private double radioCirculo,diametroCirculo,perimetroCirculo;
+    double radioCirculo;
+    double diametroCirculo;
+    double perimetroCirculo;
 
-    public Circulo() {
-
-        this.radioCirculo = radioCirculo;
-        this.diametroCirculo = diametroCirculo;
-        this.perimetroCirculo = perimetroCirculo;
+    public Circulo(){
+        radioCirculo = 0;
+        diametroCirculo = 0;
+        perimetroCirculo = 0;
     }
 
     public void areaCirculo() {
-        System.out.println("\t ==[ Área de un círculo ]==\n");
-
-        do{
-            System.out.println("\n¡Ingrese valores positivos!\n");
-            System.out.print("Ingrese el radio del círculo: ");
-            setRadioCirculo(radioCirculo = sc.nextDouble());
-        }while (radioCirculo < 0);
         System.out.println("EL area es :"+Math.PI*Math.pow(radioCirculo,2));
     }
 
@@ -32,16 +26,24 @@ public class Circulo {
 
     }
 
-
-
-
+    public double getRadioCirculo() {
+        return radioCirculo;
+    }
 
     public void setRadioCirculo(double radioCirculo) {
         this.radioCirculo = radioCirculo;
     }
 
+    public double getDiametroCirculo() {
+        return diametroCirculo;
+    }
+
     public void setDiametroCirculo(double diametroCirculo) {
         this.diametroCirculo = diametroCirculo;
+    }
+
+    public double getPerimetroCirculo() {
+        return perimetroCirculo;
     }
 
     public void setPerimetroCirculo(double perimetroCirculo) {
