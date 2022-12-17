@@ -18,6 +18,7 @@ public class main {
 
         Cilindro cilin = new Cilindro();
         Cono cono = new Cono();
+        Cubo cubo = new Cubo();
 
         do{
             op = menu.menu();
@@ -125,6 +126,35 @@ public class main {
 
                                 System.out.println("\nArea total " + dcm.format(cono.volumen() + "\n"));
 
+                                break;
+
+                            case 3:
+                                System.out.println("\n===[ AREA DEL CUBO ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("Ingre el valor del lado: ");
+                                    cubo.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+
+                                System.out.println("\nArea: " + dcm.format(cubo.area() + "\n"));
+
+                                System.out.println("\n===[ VOLUMEN DEL CUBO ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("Ingre el valor del lado: ");
+                                    cubo.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+
+                                System.out.println("\nVolumen: " + dcm.format(cubo.volumen() + "\n"));
+
+                                System.out.println("\n===[ DIAGONAL DEL CUBO ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("Ingre el valor del lado: ");
+                                    cubo.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+
+                                System.out.println("\nDiagonal: " + dcm.format(cubo.diagonal() + "\n"));
                                 break;
 
 
