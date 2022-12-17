@@ -1,13 +1,14 @@
 package Geometria3D;
 
 import java.util.Map;
-import java.util.Scanner;
 
 public class Cilindro {
     double areaCilin, areaBI, volumenCilin;
     double altura, radio;
     private double NPi = Math.PI;
-    Scanner sc = new Scanner(System.in);
+
+
+
     public Cilindro() {
         this.areaCilin = areaCilin;
         this.areaBI = areaBI;
@@ -16,41 +17,19 @@ public class Cilindro {
         this.NPi = NPi;
         this.radio = radio;
     }
-    public void areaCilindro(){
-        do {
-            System.out.println("Ingre el valor del radio: ");
-            setRadio(radio = sc.nextDouble());
-        }while (radio < 0);
-        do {
-            System.out.println("Ingrese el valor de la altura: ");
-            setAltura(altura = sc.nextDouble());
-        }while (altura < 0);
+    public double areaCilindro(){
         areaCilin = 2 * NPi * radio * (radio + altura);
-        System.out.println("La area del cilindro es:" + areaCilin);
+        return areaCilin;
     }
 
-    public void areaBaseInferior (){
-        do {
-            System.out.println("Ingrese valores positivoso \n");
-            System.out.println("Ingre el valor del radio: ");
-            setRadio(radio = sc.nextDouble());
-        }while (radio < 0);
+    public double areaBaseInferior (){
         areaBI = NPi * Math.pow(radio,2);
-        System.out.println("Area Base Inferior: " + areaBI);
+        return  areaBI;
     }
 
-    public void volumenCilindro () {
-        do {
-            System.out.println("Ingrese valores positivoso \n");
-            System.out.println("Ingre el valor del radio: ");
-            setRadio(radio = sc.nextDouble());
-        }while (radio < 0);
-        do {
-            System.out.println("Ingrese valores positivoso \n");
-            System.out.println("Ingrese el valor de la altura: ");
-            setAltura(altura = sc.nextDouble());
-        }while (altura < 0);
+    public double volumenCilindro () {
         volumenCilin = NPi * Math.pow(radio,2);
+        return volumenCilin;
     }
     public void setAreaCilin(double areaCilin) {
         this.areaCilin = areaCilin;
