@@ -3,8 +3,8 @@ package Geometria3D;
 import java.util.Map;
 
 public class Cilindro {
-    double areaCilin, areaBI, volumenCilin;
-    double altura, radio;
+    private double areaCilin, areaBI, volumenCilin;
+    private double altura, radio;
     private double NPi = Math.PI;
 
 

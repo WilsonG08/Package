@@ -23,6 +23,9 @@ public class main {
         PiramedeCuadrangular cuadra = new PiramedeCuadrangular();
         PiramideRectangular recta = new PiramideRectangular();
         Piramidetriangular tri = new Piramidetriangular();
+        PrismaPentagonal pen = new PrismaPentagonal();
+        PrismaRectangular rec = new PrismaRectangular();
+        PrismaTriangular trian = new PrismaTriangular();
 
         do{
             op = menu.menu();
@@ -46,6 +49,7 @@ public class main {
                 case 2:
                     do {
                         auxR = 0;
+                        op = 0;
                         op = menu.geometria3D();
                         switch (op){
                             case 1:
@@ -70,7 +74,7 @@ public class main {
                                     cilin.setRadio(auxR = sc.nextDouble());
                                 }while (auxR < 0);
 
-                                System.out.println("\nArea Base Inferior: " + dcm.format(cilin.areaBaseInferior() + "\n"));
+                                System.out.println("\nArea Base Inferior: " + dcm.format(cilin.areaBaseInferior()) + "\n");
 
                                 System.out.println("\n===[ VOLUMEN ]===");
                                 do {
@@ -83,7 +87,7 @@ public class main {
                                     System.out.print("Ingrese el valor de la altura: ");
                                     cilin.setAltura(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nVolumen: " + dcm.format(cilin.volumenCilindro() + "\n"));
+                                System.out.println("\nVolumen: " + dcm.format(cilin.volumenCilindro()) + "\n");
 
                                 break;
 
@@ -101,7 +105,7 @@ public class main {
                                     cono.setInclinacion(auxR = sc.nextDouble());
                                 }while (auxR < 0);
 
-                                System.out.println("\nArea latertal: " + dcm.format(cono.arealateral() + "\n"));
+                                System.out.println("\nArea latertal: " + dcm.format(cono.arealateral()) + "\n");
 
 
                                 System.out.println("\n===[ AREA TOTAL DEL CONO ]===");
@@ -116,7 +120,7 @@ public class main {
                                     cono.setInclinacion(auxR = sc.nextDouble());
                                 }while (auxR < 0);
 
-                                System.out.println("\nArea total " + dcm.format(cono.areaTotal() + "\n"));
+                                System.out.println("\nArea total " + dcm.format(cono.areaTotal()) + "\n");
 
                                 System.out.println("\n===[ VOLUMEN DEL CONO ]===");
                                 do {
@@ -130,7 +134,7 @@ public class main {
                                     cono.setAltura(auxR = sc.nextDouble());
                                 }while (auxR < 0);
 
-                                System.out.println("\nArea total " + dcm.format(cono.volumen() + "\n"));
+                                System.out.println("\nArea total " + dcm.format(cono.volumen()) + "\n");
 
                                 break;
 
@@ -142,7 +146,7 @@ public class main {
                                     cubo.setLado(auxR = sc.nextDouble());
                                 }while (auxR < 0);
 
-                                System.out.println("\nArea: " + dcm.format(cubo.area() + "\n"));
+                                System.out.println("\nArea: " + dcm.format(cubo.area()) + "\n");
 
                                 System.out.println("\n===[ VOLUMEN DEL CUBO ]===");
                                 do {
@@ -151,7 +155,7 @@ public class main {
                                     cubo.setLado(auxR = sc.nextDouble());
                                 }while (auxR < 0);
 
-                                System.out.println("\nVolumen: " + dcm.format(cubo.volumen() + "\n"));
+                                System.out.println("\nVolumen: " + dcm.format(cubo.volumen()) + "\n");
 
                                 System.out.println("\n===[ DIAGONAL DEL CUBO ]===");
                                 do {
@@ -160,7 +164,7 @@ public class main {
                                     cubo.setLado(auxR = sc.nextDouble());
                                 }while (auxR < 0);
 
-                                System.out.println("\nDiagonal: " + dcm.format(cubo.diagonal() + "\n"));
+                                System.out.println("\nDiagonal: " + dcm.format(cubo.diagonal()) + "\n");
                                 break;
 
                             case 4:
@@ -170,7 +174,7 @@ public class main {
                                     System.out.print("Ingrese el valor del radio: ");
                                     esf.setRadio(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nArea: " + dcm.format(esf.area() + "\n"));
+                                System.out.println("\nArea: " + dcm.format(esf.area()) + "\n");
 
                                 System.out.println("\n===[ VOLUMEN DE LA ESFERA ]===");
                                 do {
@@ -178,7 +182,7 @@ public class main {
                                     System.out.print("Ingrese el valor del radio: ");
                                     esf.setRadio(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nVolumen: " + dcm.format(esf.volumen() + "\n"));
+                                System.out.println("\nVolumen: " + dcm.format(esf.volumen()) + "\n");
 
                                 System.out.println("\n===[ VOLUMEN DEL SECTOR ESFERICO ]===");
                                 do {
@@ -191,7 +195,7 @@ public class main {
                                     System.out.print("Ingrese el valor de la altura: ");
                                     esf.setAltura(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nArea: " + dcm.format(esf.area() + "\n"));
+                                System.out.println("\nArea: " + dcm.format(esf.area()) + "\n");
                                 break;
                             case 5:
                                 System.out.println("\n===[ AREA BASES PIRAMEDE CUADRANGULAR ]===");
@@ -200,7 +204,7 @@ public class main {
                                     System.out.print("Ingrese el valor del lado: ");
                                     cuadra.setBase(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nArea base: " + dcm.format(cuadra.areaBae() + "\n"));
+                                System.out.println("\nArea base: " + dcm.format(cuadra.areaBae()) + "\n");
 
                                 System.out.println("\n===[ AREA CARA LATERALES DE LA PIRAMEDE CUADRANGULAR ]===");
                                 do {
@@ -213,7 +217,7 @@ public class main {
                                     System.out.print("Ingrese el valor de la altura: ");
                                     cuadra.setAltura(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nArea cara laterales: " + dcm.format(cuadra.areaCarasLaterales() + "\n"));
+                                System.out.println("\nArea cara laterales: " + dcm.format(cuadra.areaCarasLaterales()) + "\n");
 
                                 System.out.println("\n===[ VOLUMEN PIRAMEDE CUADRANGULAR ]===");
                                 do {
@@ -221,39 +225,41 @@ public class main {
                                     System.out.print("Ingrese el valor de la altura: ");
                                     cuadra.setBase(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nVolumen: " + dcm.format(cuadra.volumen() + "\n"));
+                                System.out.println("\nVolumen: " + dcm.format(cuadra.volumen()) + "\n");
                                 break;
                             case 6:
                                 double menor=0;
                                 System.out.println("\n===[ AREA DE LA PIRAMIDE RECTANGULAR]===");
                                 do {
                                     System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("El lado menor no puede ser mayor que el otro lado");
                                     System.out.print("Ingrese el valor del lado mayor: ");
                                     recta.setBaseMayor(auxR = sc.nextDouble());
-                                    System.out.print("Ingrese el valor del lado mayor: ");
+                                    System.out.print("Ingrese el valor del lado menor: ");
                                     recta.setBaseMenor(menor = sc.nextDouble());
-                                }while ((auxR < 0)||(menor < 0) || (auxR > menor));
+                                }while ((auxR < 0)||(menor < 0) || (auxR <= menor));
                                 do {
                                     System.out.println("Ingrese valores positivoso \n");
                                     System.out.print("Ingrese el valor de la altura: ");
                                     recta.setAltura(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nArea: " + dcm.format(recta.area() + "\n"));
+                                System.out.println("\nArea: " + dcm.format(recta.area()) + "\n");
 
                                 System.out.println("\n===[ VOLUMEN DE LA PIRAMIDE RECTANGULAR ]===");
                                 do {
                                     System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("El lado menor no puede ser mayor que el otro lado");
                                     System.out.print("Ingrese el valor del lado mayor: ");
                                     recta.setBaseMayor(auxR = sc.nextDouble());
-                                    System.out.print("Ingrese el valor del lado mayor: ");
+                                    System.out.print("Ingrese el valor del lado menor: ");
                                     recta.setBaseMenor(menor = sc.nextDouble());
-                                }while ((auxR < 0)||(menor < 0) || (auxR > menor));
+                                }while ((auxR < 0)||(menor < 0) || (auxR <= menor));
                                 do {
                                     System.out.println("Ingrese valores positivoso \n");
                                     System.out.print("Ingrese el valor de la altura: ");
                                     recta.setAltura(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nVolumen: " + dcm.format(recta.volumen() + "\n"));
+                                System.out.println("\nVolumen: " + dcm.format(recta.volumen()) + "\n");
                                 break;
 
                             case 7:
@@ -268,7 +274,7 @@ public class main {
                                     System.out.print("Ingrese el valor de la altura base: ");
                                     tri.setAlturabase(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nArea base: " + dcm.format(tri.areaBase() + "\n"));
+                                System.out.println("\nArea base: " + dcm.format(tri.areaBase()) + "\n");
 
                                 System.out.println("\n===[ AREA CARA LATERAL DE LA PIRAMEDE TRIANGULAR ]===");
                                 do {
@@ -281,12 +287,152 @@ public class main {
                                     System.out.print("Ingrese el valor de la altura lateral: ");
                                     tri.setAlturaCaraLateral(auxR = sc.nextDouble());
                                 }while (auxR < 0);
-                                System.out.println("\nArea cara lateral: " + dcm.format(tri.areaCaraLateral() + "\n"));
+                                System.out.println("\nArea cara lateral: " + dcm.format(tri.areaCaraLateral()) + "\n");
 
                                 System.out.println("\n===[ AREA CARA LATERAL DE LA PIRAMEDE TRIANGULAR ]===");
                                 System.out.println("\nArea total: " + dcm.format(tri.areaTotal() + "\n"));
                                 break;
+                            case 8:
+                                System.out.println("\n===[ AREA PRISMA PENTAGONAL ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del lado: ");
+                                    pen.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del apotema: ");
+                                    pen.setApotema(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor de la altura: ");
+                                    pen.setAltura(auxR = sc.nextDouble());
+                                }while (auxR < 0);
 
+                                System.out.println("\nArea: " + dcm.format(pen.area()) + "\n");
+
+                                System.out.println("\n===[ AREA BASES DEL PRISMA PENTAGONAL ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del lado: ");
+                                    pen.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del apotema: ");
+                                    pen.setApotema(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                System.out.println("\nArea base: " + dcm.format(pen.areaBase()) + "\n");
+
+                                System.out.println("\n===[ VOLUMEN DEL PRISMA PENTAGONAL ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del lado: ");
+                                    pen.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del apotema: ");
+                                    pen.setApotema(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                System.out.println("\nVolumen: " + dcm.format(pen.volumen()) + "\n");
+                                break;
+
+                            case 9:
+                                double menor1=0;
+                                System.out.println("\n===[ AREA DE LA PRISMA RECTANGULAR]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("El lado menor no puede ser mayor que el otro lado");
+                                    System.out.print("Ingrese el valor del lado mayor: ");
+                                    rec.setBaseMayor(auxR = sc.nextDouble());
+                                    System.out.print("Ingrese el valor del lado menor: ");
+                                    rec.setBaseMenor(menor1 = sc.nextDouble());
+                                }while ((auxR < 0)||(menor1 < 0) || (auxR <= menor1));
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor de la altura: ");
+                                    rec.setAltura(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                System.out.println("\nArea: " + dcm.format(rec.area()) + "\n");
+
+                                System.out.println("\n===[ AREA LATERAL DE LA PRISMA RECTANGULAR]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("El lado menor no puede ser mayor que el otro lado");
+                                    System.out.print("Ingrese el valor del lado mayor: ");
+                                    rec.setBaseMayor(auxR = sc.nextDouble());
+                                    System.out.print("Ingrese el valor del lado menor: ");
+                                    rec.setBaseMenor(menor1 = sc.nextDouble());
+                                }while ((auxR < 0)||(menor1 < 0) || (auxR <= menor1));
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor de la altura: ");
+                                    rec.setAltura(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                System.out.println("\nArea lateral: " + dcm.format(rec.areaLateral()) + "\n");
+
+                                System.out.println("\n===[ VOLUMEN DE LA PRISMA RECTANGULAR]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.println("El lado menor no puede ser mayor que el otro lado");
+                                    System.out.print("Ingrese el valor del lado mayor: ");
+                                    rec.setBaseMayor(auxR = sc.nextDouble());
+                                    System.out.print("Ingrese el valor del lado menor: ");
+                                    rec.setBaseMenor(menor1 = sc.nextDouble());
+                                }while ((auxR < 0)||(menor1 < 0) || (auxR <= menor1));
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor de la altura: ");
+                                    rec.setAltura(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                System.out.println("\nVolumen: " + dcm.format(rec.volumen()) + "\n");
+
+                                break;
+
+                            case 10:
+                                int aux;
+                                System.out.println("\n===[ ARISTAS DEL PRISMA TRIANGULAR ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el numero de caras: ");
+                                    trian.setCaras(aux = sc.nextInt());
+                                }while (aux < 0);
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el numero de vertices: ");
+                                    trian.setVertices(aux = sc.nextInt());
+                                }while (aux < 0);
+
+                                System.out.println("\nAristas: " + dcm.format(trian.aristas()) + "\n");
+
+                                System.out.println("\n===[ AREA DEL PRISMA TRIANGULAR ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del lado: ");
+                                    trian.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor de la altura: ");
+                                    trian.setAltura(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                System.out.println("\nArea: " + dcm.format(trian.area()) + "\n");
+
+                                System.out.println("\n===[ VOLUMEN DEL PRISMA TRIANGULAR ]===");
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor del lado: ");
+                                    trian.setLado(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                do {
+                                    System.out.println("Ingrese valores positivoso \n");
+                                    System.out.print("Ingrese el valor de la altura: ");
+                                    trian.setAltura(auxR = sc.nextDouble());
+                                }while (auxR < 0);
+                                System.out.println("\nVolumen: " + dcm.format(trian.volumen()) + "\n");
+                                break;
 
 
                         }

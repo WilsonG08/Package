@@ -49,7 +49,7 @@ public class menu {
             System.out.println("==============================");
             System.out.print("Opcion: ");
             op = sc.nextInt();
-        }while (op < 0 || op > 2);
+        }while (op < 0 || op > 10);
         return op;
     }
 }
