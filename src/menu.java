@@ -28,7 +28,9 @@ public class menu {
             System.out.println("| 5. Pentágono       |");
             System.out.println("| 6. Rectángulo      |");
             System.out.println("| 7. Rombo           |");
-            System.out.println("| 7. Trapecio        |");
+            System.out.println("| 8. Trapecio        |");
+            System.out.println("| 9. Triángulo       |");
+            System.out.println("| 10. Octógono       |");
             System.out.println("| 0. Salir        |");
             System.out.println("===================");
             System.out.print("Opcion: ");

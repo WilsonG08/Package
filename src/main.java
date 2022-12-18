@@ -12,13 +12,14 @@ public class main {
         int op;
         Circulo circu = new Circulo();
         Cuadrado cua = new Cuadrado();
-        // aqui falta uno
         Hexagono hexa =  new Hexagono();
         Paralelogramo para = new Paralelogramo();
         Pentagono pentaa = new Pentagono();
         Rectangulo rectan = new Rectangulo();
         Rombo rom = new Rombo();
         Trapecio trap = new Trapecio();
+        Triangulo triangu = new Triangulo();
+        Octogono octo = new Octogono();
 
 
 
@@ -249,7 +250,7 @@ public class main {
                                 System.out.println("El Perímetro del Rombo es : "+dcm.format(rom.perimetroRombo())+"\n");
                                 System.out.println("==========================================================");
 
-                                System.out.println("\t ==[ Áre del Rombo ]==\n");
+                                System.out.println("\t ==[ Área del Rombo ]==\n");
                                 do{
                                     System.out.println("\n¡Ingrese valores positivos!\n");
                                     System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
@@ -275,16 +276,19 @@ public class main {
                                 break;
 
                             case 8:
-                                System.out.println("\t ==[ Área del Rombo ]==\n");
+                                System.out.println("\t ==[ Área del Trapecio Isoceles ]==\n");
+                                double auxDD3=0;
                                 do{
                                     System.out.println("\n¡Ingrese valores positivos!\n");
                                     System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
                                     System.out.print("Ingrese la diagonal MAYOR : ");
-                                    trap.setAltura(auxRDD = sc.nextDouble());
+                                    trap.setBaseMAyor(auxRDD = sc.nextDouble());
                                     System.out.print("Ingrese la diagonal MENOR : ");
                                     trap.setBaseMenor(auxRDD2 = sc.nextDouble());
-                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0);
-                                System.out.println("El área del rombo es : "+dcm.format(trap.areaTrapecioIsoceles()));
+                                    System.out.print("Ingrese la altura : ");
+                                    trap.setAltura(auxDD3 = sc.nextDouble());
+                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0 || auxDD3 <0);
+                                System.out.println("El área del Trapecio Iscoceles es : "+dcm.format(trap.areaTrapecioIsoceles())+"\n");
 
                                 System.out.println("==========================================================");
 
@@ -293,13 +297,93 @@ public class main {
                                     System.out.println("\n¡Ingrese valores positivos!\n");
                                     System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
                                     System.out.print("Ingrese la diagonal MAYOR : ");
-                                    trap.setAltura(auxRDD = sc.nextDouble());
+                                    trap.setBaseMAyor(auxRDD = sc.nextDouble());
                                     System.out.print("Ingrese la diagonal MENOR : ");
-                                    //trap.setBaseMenor(auxRDD2 = sc.nextDouble());
-                                    // esta mal
-                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0);
+                                    trap.setBaseMenor(auxRDD2 = sc.nextDouble());
+                                    System.out.print("Ingrese la altura : ");
+                                    trap.setAltura(auxDD3 = sc.nextDouble());
+                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0 || auxDD3 <0);
                                 System.out.println("El perímetro del Trapecio es : "+dcm.format(trap.perimetroTrapecio()));
 
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Altura de un Trapecio Isoceles ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
+                                    System.out.print("Ingrese la diagonal MAYOR : ");
+                                    trap.setBaseMAyor(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese la diagonal MENOR : ");
+                                    trap.setBaseMenor(auxRDD2 = sc.nextDouble());
+                                    System.out.print("Ingrese la longitud del lado : ");
+                                    trap.setLongLateral(auxDD3  = sc.nextDouble());
+                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0 || auxDD3 <0);
+                                System.out.println("La altura del Trapcio Isoceles es : "+dcm.format(trap.alturaTrapecioIsoceles())+"\n");
+                                break;
+
+                            case 9:
+                                System.out.println("\t ==[ Perímetro del Triángulo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el 1er lado : ");
+                                    triangu.setLado1(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese el 2do lado : ");
+                                    triangu.setLado2(auxRDD2 = sc.nextDouble());
+                                    System.out.print("Ingrese el 3er lado : ");
+                                    triangu.setLado3(auxDD3 = sc.nextDouble());
+                                }while (auxRDD <0 || auxRDD2 <0 || auxDD3 <0);
+                                System.out.println("El perímetro del Triángulo es : "+dcm.format(triangu.perimetroTriangulo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Área del Triángulo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese la base : ");
+                                    triangu.setBase(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese la altura : ");
+                                    triangu.setAltura(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD<0 || auxRDD2<0);
+                                System.out.println("El área del Triángulo es : "+dcm.format(triangu.areaTrianngulo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Altura del Triángulo Equilatero ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado : ");
+                                    triangu.setLado1(auxRDD = sc.nextDouble());
+                                }while (auxRDD<0);
+                                System.out.println("La altural del Triángulo Equilatero es : "+dcm.format(triangu.alturaTrianguloEquilatero())+"\n");
+                                break;
+
+                            case 10:
+                                System.out.println("\t ==[ Perímetro de un Octógono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado : ");
+                                    octo.setLadoOcto(auxRDD = sc.nextDouble());
+                                }while (auxRDD <0);
+                                System.out.println("El Perímetro del Octógono es : "+dcm.format(octo.perimetroOctogono())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Área de un Octógono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado : ");
+                                    octo.setLadoOcto(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese el apotema : ");
+                                    octo.setApoOcto(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD<0 || auxRDD2<0);
+                                System.out.printf("El área del Octógono es : "+dcm.format(octo.areaOctogono())+"\n");
+
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[  Apotema de un Octógono Regular ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado : ");
+                                    octo.setLadoOcto(auxRDD = sc.nextDouble());
+                                }while (auxRDD<0);
+                                System.out.println("El apotema del Octógono Regular es : "+dcm.format(octo.apotemaOctogono())+"\n");
                                 break;
                         }
                     }while (op != 0);
