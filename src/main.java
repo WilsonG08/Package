@@ -2,6 +2,7 @@ import Geometria2D.*;
 import Geometria3D.*;
 
 import java.text.DecimalFormat;
+import java.time.chrono.ThaiBuddhistEra;
 import java.util.Scanner;
 
 public class main {
@@ -13,6 +14,12 @@ public class main {
         Cuadrado cua = new Cuadrado();
         // aqui falta uno
         Hexagono hexa =  new Hexagono();
+        Paralelogramo para = new Paralelogramo();
+        Pentagono pentaa = new Pentagono();
+        Rectangulo rectan = new Rectangulo();
+        Rombo rom = new Rombo();
+        Trapecio trap = new Trapecio();
+
 
 
         // Llamada de la funcion menu
@@ -96,18 +103,204 @@ public class main {
                                     System.out.print("Ingrese el lado del cuadrado : ");
                                     cua.setDiaCuadrado(auxRDD = sc.nextDouble());
                                 }while (auxRDD < 0);
-                                System.out.println("La diagonal del cuadrado es : "+dcm.format(cua.diagonalCuadrado()));
+                                System.out.println("La diagonal del cuadrado es : "+dcm.format(cua.diagonalCuadrado())+"\n");
                                 break;
 
                             case 3:
                                 System.out.println("\t ==[ Área de un Hexagono ]==\n");
                                 do{
                                     System.out.println("\n¡Ingrese valores positivos!\n");
-                                    System.out.println();
-                                }while(1<0);// hasta aqui
+                                    System.out.print("Ingrese el perímetro del hexagono : ");
+                                    hexa.setPerimetro(auxRDD = sc.nextDouble());
+                                }while(auxRDD < 0);
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el apotema : ");
+                                    hexa.setApotema(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD2 < 0);
+                                System.out.println("El área del hexagono es : "+dcm.format(hexa.areaHexagono())+"\n");
+                                System.out.println("==========================================================");
 
+                                System.out.println("\t ==[ Perímetro de un Hexagono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado : ");
+                                    hexa.setLado(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("El perímetro del hexagono es : "+dcm.format(hexa.perimetroHexagono())+"\n");
+                                System.out.println("==========================================================");
 
+                                System.out.println("\t ==[ Apotema de un Hexagono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado : ");
+                                    hexa.setLado2(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("El apotema del hexagono es : "+dcm.format(hexa.apotemaHexagono())+"\n");
+                                break;
 
+                            case 4:
+                                System.out.println("\t ==[ Área de un Paralelogramo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese la altura :");
+                                    para.setAltura(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese la base : ");
+                                    para.setBase(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD < 0 || auxRDD2 < 0);
+                                System.out.println("El área del paralelogramo es : "+dcm.format(para.areaParalelogramo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Perímetro de un Paralelogramo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del 1er lado :");
+                                    para.setLado1(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese el valir del 2do lado : ");
+                                    para.setLado2(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD <0 || auxRDD2 < 0);
+                                System.out.println("El perímetro del paralelogramo es : "+dcm.format(para.periParalelogramo())+"\n");
+
+                                System.out.println("==========================================================");
+                                System.out.println("\t ==[ Altura de un Paralelogramo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado vertical : ");
+                                    para.setAltura2(auxRDD = sc.nextDouble());
+                                    System.out.println("\nRecuerda que el ángulo no puede ser mayor a 60\n");
+                                    System.out.print("Ingrese el valor del angulo : ");
+                                    para.setAngulo(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD < 0||auxRDD>60);
+                                System.out.println("Altura del paralelogramo : "+dcm.format(para.alturaParalelogramo())+"\n");
+                                break;
+
+                            case 5:
+                                System.out.println("\t ==[ Perímetro de un Pentágono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor de un lado : ");
+                                    pentaa.setLadoPenta(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("El perímetro del Pentágono es : "+dcm.format(pentaa.perimetroPentagono())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Área de un Pentágono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese le valor de un lado : ");
+                                    pentaa.setPerimetroPenta( auxRDD  =sc.nextDouble());
+                                    System.out.print("Ingrese el apotema : ");
+                                    pentaa.setApoPenta( auxRDD2 = sc.nextDouble());
+                                }while (auxRDD < 0 || auxRDD2 <0);
+                                System.out.println("El área del Pentágono es : "+dcm.format(pentaa.areaPentagono())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Apotema de un Pentágono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor de un lado : ");
+                                    pentaa.setMitadLado(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0 );
+                                System.out.println("El apotema de un Pentágono es : "+dcm.format(pentaa.apotemaPentagono())+"\n");
+                                break;
+
+                            case 6:
+
+                                System.out.println("\t ==[ Área de un Rectángulo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor de la base : ");
+                                    rectan.setBaseRec( auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese el valor de la altura : ");
+                                    rectan.setAlturaRec(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD < 0 || auxRDD2 < 0);
+                                System.out.println("El áre del Rectángulo es : "+dcm.format(rectan.areaRectangulo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Altura del Rectángulo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del área : ");
+                                    rectan.setAreaRec(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese el valor de la base : ");
+                                    rectan.setBaseRec(auxRDD2  =sc.nextDouble());
+                                }while (auxRDD <0 || auxRDD2 <0);
+                                System.out.println("La altura del Rectángulo es : "+dcm.format(rectan.alturaRectangulo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Perímetro del Rectángulo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor del lado 1 : ");
+                                    rectan.setLado1(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese el valor del lado 2 : ");
+                                    rectan.setLado2(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD <0 || auxRDD2<0);
+                                System.out.println("El perímetro del Rectángulo es : "+dcm.format(rectan.perimetroRectangulo()));
+                                break;
+
+                            case 7:
+                                System.out.println("\t ==[ Perímetro del Rombo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el valor de un lado : ");
+                                    rom.setLadoRom(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("El Perímetro del Rombo es : "+dcm.format(rom.perimetroRombo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Áre del Rombo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
+                                    System.out.print("Ingrese la diagonal MAYOR : ");
+                                    rom.setDiagonalMayorR(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese la diagonal MENOR : ");
+                                    rom.setDiagonalMenorR(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0);
+                                System.out.println("El área del Rombo es : "+dcm.format(rom.areaRombo())+"\n");
+
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Perímetro del Rombo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
+                                    System.out.print("Ingrese la diagonal MAYOR : ");
+                                    rom.setDiagonalMayorR(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese la diagonal MENOR : ");
+                                    rom.setDiagonalMenorR(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0);
+                                System.out.println("El lado el rombo es : "+dcm.format(rom.ladoRombo())+"\n");
+                                break;
+
+                            case 8:
+                                System.out.println("\t ==[ Área del Rombo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
+                                    System.out.print("Ingrese la diagonal MAYOR : ");
+                                    trap.setAltura(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese la diagonal MENOR : ");
+                                    trap.setBaseMenor(auxRDD2 = sc.nextDouble());
+                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0);
+                                System.out.println("El área del rombo es : "+dcm.format(trap.areaTrapecioIsoceles()));
+
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Perimetro de un Trapecio ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.println("Recuerda que la diagonal mayor no puede ser mas grande que la diagonal menor!!");
+                                    System.out.print("Ingrese la diagonal MAYOR : ");
+                                    trap.setAltura(auxRDD = sc.nextDouble());
+                                    System.out.print("Ingrese la diagonal MENOR : ");
+                                    //trap.setBaseMenor(auxRDD2 = sc.nextDouble());
+                                    // esta mal
+                                }while (auxRDD2 > auxRDD || auxRDD <0 || auxRDD2 <0);
+                                System.out.println("El perímetro del Trapecio es : "+dcm.format(trap.perimetroTrapecio()));
+
+                                break;
                         }
                     }while (op != 0);
                     break;

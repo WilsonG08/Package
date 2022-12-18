@@ -23,12 +23,17 @@ public class menu {
             System.out.println("=====GEOMETRIA 2D=====");
             System.out.println("| 1. Círculo         |");
             System.out.println("| 2. Cuadrado        |");
-            System.out.println("| 3.- Elipse         |");
+            System.out.println("| 3. Elipse          |");
+            System.out.println("| 4. Paralelogramo   |");
+            System.out.println("| 5. Pentágono       |");
+            System.out.println("| 6. Rectángulo      |");
+            System.out.println("| 7. Rombo           |");
+            System.out.println("| 7. Trapecio        |");
             System.out.println("| 0. Salir        |");
             System.out.println("===================");
             System.out.print("Opcion: ");
             op = sc.nextInt();
-        }while (op < 0 || op > 2);
+        }while (op < 0 || op > 10);
         return op;
     }
 
