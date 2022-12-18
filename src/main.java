@@ -11,6 +11,8 @@ public class main {
         int op;
         Circulo circu = new Circulo();
         Cuadrado cua = new Cuadrado();
+        // aqui falta uno
+        Hexagono hexa =  new Hexagono();
 
 
         // Llamada de la funcion menu
@@ -21,7 +23,7 @@ public class main {
         double auxR=0;
 
         // Para la utilizacion de la clase geometria 2D
-        double auxRDD=0;
+        double auxRDD=0,auxRDD2=0;
 
         Cilindro cilin = new Cilindro();
         Cono cono = new Cono();
@@ -63,7 +65,7 @@ public class main {
                                 System.out.println("\t\n ==[ Perímetro de un círculo ]==\n");
                                 do{
                                     System.out.println("\n¡Ingrese valores positivos!\n");
-                                    System.out.println("Ingrese el diámetro del círculo : ");
+                                    System.out.print("Ingrese el diámetro del círculo : ");
                                     circu.setPeCirculo(auxRDD = sc.nextDouble());
                                 }while ( auxRDD < 0);
                                 System.out.println("\nEl Perímetro del círculo es : "+dcm.format(circu.perimetroCirculo())+"\n");
@@ -96,6 +98,14 @@ public class main {
                                 }while (auxRDD < 0);
                                 System.out.println("La diagonal del cuadrado es : "+dcm.format(cua.diagonalCuadrado()));
                                 break;
+
+                            case 3:
+                                System.out.println("\t ==[ Área de un Hexagono ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.println();
+                                }while(1<0);// hasta aqui
+
 
 
                         }
