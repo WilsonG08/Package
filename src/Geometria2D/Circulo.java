@@ -5,25 +5,35 @@ import java.util.Scanner;
 public class Circulo {
 
     Scanner sc= new Scanner(System.in);
-    double radioCirculo;
-    double diametroCirculo;
-    double perimetroCirculo;
+    double radioCirculo, diaCirculo, peCirculo;
+    private double VPi = Math.PI;
 
     public Circulo(){
         radioCirculo = 0;
-        diametroCirculo = 0;
-        perimetroCirculo = 0;
+        diaCirculo = 0;
+        peCirculo = 0;
     }
 
     public double areaCirculo() {
-        return Math.PI*Math.pow(radioCirculo,2);
+        return VPi*Math.pow(radioCirculo,2);
     }
 
-    public void diametroCircuo(){
-        System.out.println("\n\t==[ Diámetro de un círculo ]==\n");
-        System.out.println("EL radio es:"+radioCirculo);
-        System.out.println("El diametro es: "+radioCirculo*2);
+    public double diametroCircuo(){
+        diaCirculo = radioCirculo*2;
+        return diaCirculo;
+    }
 
+    public double perimetroCirculo(){
+        peCirculo = VPi * diaCirculo;
+        return peCirculo;
+    }
+
+    public Scanner getSc() {
+        return sc;
+    }
+
+    public void setSc(Scanner sc) {
+        this.sc = sc;
     }
 
     public double getRadioCirculo() {
@@ -34,19 +44,19 @@ public class Circulo {
         this.radioCirculo = radioCirculo;
     }
 
-    public double getDiametroCirculo() {
-        return diametroCirculo;
+    public double getDiaCirculo() {
+        return diaCirculo;
     }
 
-    public void setDiametroCirculo(double diametroCirculo) {
-        this.diametroCirculo = diametroCirculo;
+    public void setDiaCirculo(double diaCirculo) {
+        this.diaCirculo = diaCirculo;
     }
 
-    public double getPerimetroCirculo() {
-        return perimetroCirculo;
+    public double getPeCirculo() {
+        return peCirculo;
     }
 
-    public void setPerimetroCirculo(double perimetroCirculo) {
-        this.perimetroCirculo = perimetroCirculo;
+    public void setPeCirculo(double peCirculo) {
+        this.peCirculo = peCirculo;
     }
 }

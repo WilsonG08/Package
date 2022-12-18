@@ -21,8 +21,9 @@ public class menu {
         int op;
         do {
             System.out.println("=====GEOMETRIA 2D=====");
-            System.out.println("| 1. Circulo         |");
-            System.out.println("| 2. Geometria 3D |");
+            System.out.println("| 1. Círculo         |");
+            System.out.println("| 2. Cuadrado        |");
+            System.out.println("| 3.- Elipse         |");
             System.out.println("| 0. Salir        |");
             System.out.println("===================");
             System.out.print("Opcion: ");

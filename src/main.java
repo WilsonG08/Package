@@ -9,12 +9,19 @@ public class main {
         Scanner sc = new Scanner(System.in);
         DecimalFormat dcm = new DecimalFormat("0.00");
         int op;
-        Circulo cir = new Circulo();
+        Circulo circu = new Circulo();
+        Cuadrado cua = new Cuadrado();
+
+
+        // Llamada de la funcion menu
         menu menu = new menu();
 
         // las clases de la geometria 3D
 
         double auxR=0;
+
+        // Para la utilizacion de la clase geometria 2D
+        double auxRDD=0;
 
         Cilindro cilin = new Cilindro();
         Cono cono = new Cono();
@@ -39,10 +46,58 @@ public class main {
                                 do{
                                     System.out.println("\n¡Ingrese valores positivos!\n");
                                     System.out.print("Ingrese el radio del círculo: ");
-                                    cir.setRadioCirculo(auxR = menu.sc.nextDouble());
-                                    System.out.println("Area Circulo: " + dcm.format(cir.areaCirculo()));
-                                }while (op < 0);
+                                    circu.setRadioCirculo(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("\nArea Circulo: " + dcm.format(circu.areaCirculo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t\n ==[ Diámetro de un círculo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el radio del círculo: ");
+                                    circu.setDiaCirculo(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("\nEl diámetro del círculo es : "+dcm.format(circu.diametroCircuo())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t\n ==[ Perímetro de un círculo ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.println("Ingrese el diámetro del círculo : ");
+                                    circu.setPeCirculo(auxRDD = sc.nextDouble());
+                                }while ( auxRDD < 0);
+                                System.out.println("\nEl Perímetro del círculo es : "+dcm.format(circu.perimetroCirculo())+"\n");
+                                System.out.println("==========================================================");
                                 break;
+                            case 2:
+                                System.out.println("\t ==[ Área de un cuadrado ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese la longitud de un lado: ");
+                                    cua.setaCuadrado(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("\nEl área del cuadrado es : "+dcm.format(cua.areaCuadrado())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Perímetro de un cuadrado ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el lado del cuadrado : ");
+                                    cua.setPeCuadrado( auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("EL Perímetro del cuadrado es : "+dcm.format(cua.perimetroCuadrado())+"\n");
+                                System.out.println("==========================================================");
+
+                                System.out.println("\t ==[ Diagonal de un cuadrado ]==\n");
+                                do{
+                                    System.out.println("\n¡Ingrese valores positivos!\n");
+                                    System.out.print("Ingrese el lado del cuadrado : ");
+                                    cua.setDiaCuadrado(auxRDD = sc.nextDouble());
+                                }while (auxRDD < 0);
+                                System.out.println("La diagonal del cuadrado es : "+dcm.format(cua.diagonalCuadrado()));
+                                break;
+
+
                         }
                     }while (op != 0);
                     break;
